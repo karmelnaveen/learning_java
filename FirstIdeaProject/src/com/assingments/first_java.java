@@ -29,12 +29,16 @@ public class first_java {
     static boolean isOdd(int n){
         return n % 2 != 0;
     }
+    //2
     static void greeting(String name){
         System.out.println("Hello "+name+" Welcome to Planet Earth");
     }
+    //3
     static void simpleInterest(int principal,int time,int rateOfInterest){
         int ans = principal * (1 + rateOfInterest*time);
         System.out.println("The final amout is :"+ans);
     }
+    //4
+    //Already done that in Calculator.java
 
 }
