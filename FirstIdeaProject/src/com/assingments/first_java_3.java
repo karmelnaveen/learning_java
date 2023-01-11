@@ -15,6 +15,16 @@ public class first_java_3 {
         }else {
             System.out.println(word +" is not a palindrome");
         }
+        System.out.println("Enter two number to find armstrong number between them");
+        System.out.print("First :");
+        int start = in.nextInt();
+        System.out.print("Second :");
+        int end = in.nextInt();
+        for(int i = start;i<=end;i++){
+            if(armstrong(i)){
+                System.out.print(i+"\t");
+            }
+        }
     }
     static void fibo(int n){
         int first = 0;
@@ -35,6 +45,16 @@ public class first_java_3 {
             reversed.append(word.charAt(word.length() - i));
         }
         return word.equalsIgnoreCase(reversed.toString());
+    }
+    static boolean armstrong(int n){
+        int original = n;
+        int sum = 0;
+        while(n>0){
+            int rem = n%10;
+            sum+=Math.pow(rem,3);
+            n = n/10;
+        }
+        return sum == original;
     }
     
 }
