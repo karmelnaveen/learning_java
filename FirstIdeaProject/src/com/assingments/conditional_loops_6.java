@@ -1,10 +1,6 @@
 package com.assingments;
 
 import java.util.Scanner;
-//Factorial Program In Java
-//        Calculate Electricity Bill
-//        Calculate Average Of N Numbers
-//        Calculate Discount Of Product
 //        Calculate Distance Between Two Points
 public class conditional_loops_6 {
     public static void main(String[] args) {
@@ -15,6 +11,34 @@ public class conditional_loops_6 {
         System.out.print("Enter your total consumption in units:");
         double unit = in.nextDouble();
         EBill(unit);
+        int total = 0;
+        System.out.println("Keep on entering number to find its total & 0 to stop");
+        //3
+        while (true){
+            System.out.print("Enter a number :");
+            int number = in.nextInt();
+            if(number == 0){
+                break;
+            }
+            total += number;
+        }
+        System.out.println("The total is :"+total);
+        System.out.print("Enter original Price :");
+        double price = in.nextDouble();
+        System.out.print("Enter discount percentage :");
+        double percentage = in.nextDouble();
+        Discount(price,percentage);
+        System.out.println("To calculate the distance between two points,");
+        System.out.println("Ex: (x1,x2) & (y1,y2) --- > Enter the following");
+        System.out.println("x1 :");
+        int x1 = in.nextInt();
+        System.out.println("x2 :");
+        int x2 = in.nextInt();
+        System.out.println("y1 :");
+        int y1 = in.nextInt();
+        System.out.println("y2 :");
+        int y2 = in.nextInt();
+        DistanceBtwTwoPoints(x1,x2,y1,y2);
     }
     //1
     static void Factorial(int n){
@@ -25,6 +49,7 @@ public class conditional_loops_6 {
         }
         System.out.println("\n");
     }
+    //2
     static void EBill(double unit){
         double amount = 0;
         //Rough calculation
@@ -45,5 +70,15 @@ public class conditional_loops_6 {
             amount = 1500;
         }
         System.out.println("The total bill is :"+amount);
+    }
+    //4
+    static void Discount(double price, double discount){
+        double price_reduction = price *(discount/100);
+        System.out.println("The price reduction is "+price_reduction+" and you pay "+(price-price_reduction));
+    }
+    //5
+    static void DistanceBtwTwoPoints(int x1,int x2,int y1, int y2){
+        double dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+        System.out.println("The distance between"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
     }
 }
