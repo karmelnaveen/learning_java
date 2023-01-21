@@ -1,9 +1,6 @@
 package com.assingments;
 
 import java.util.Scanner;
-//Perfect Number In Java
-//Check Leap Year Or Not
-//Sum Of A Digits Of Number
 //Kunal is allowed to go out with his friends only on the even days of a given month. Write a program to count the number of days he can go out in the month of August.
 //Write a program to print the sum of negative numbers, sum of positive even numbers and the sum of positive odd numbers from a list of numbers (N) entered by the user. The list terminates when the user enters a zero.
 public class conditional_loops_10 {
@@ -23,6 +20,16 @@ public class conditional_loops_10 {
         }else {
             System.out.println(n+" is not a perfect number");
         }
+        System.out.println("Enter a number to find whether its a leap year or not :");
+        int year = in.nextInt();
+        if(isLeapYear(year)){
+            System.out.printf(year+" is a leap year...\n");
+        }else {
+            System.out.printf(year+" is not a leap year...\n");
+        }
+        System.out.println("Enter a number to find sum of its digits :");
+        int digit = in.nextInt();
+        DigitSum(digit);
     }
 
     static boolean PerfectNumber(int n){
@@ -33,5 +40,23 @@ public class conditional_loops_10 {
             }
         }
         return sum == n;
+    }
+    static boolean isLeapYear(int year){
+        if(year % 400 == 0){
+            return true;
+        }
+        if(year % 100 == 0){
+            return false;
+        }
+        return year % 4 == 0;
+    }
+    static void DigitSum(int n){
+        int sum = 0;
+        while(n>0){
+            int reminder = n%10;
+            sum+=reminder;
+            n = n/2;
+        }
+        System.out.print(sum);
     }
 }
