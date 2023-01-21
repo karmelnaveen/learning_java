@@ -1,7 +1,6 @@
 package com.assingments;
 
 import java.util.Scanner;
-//        Calculate Depreciation of Value
 //        Calculate Batting Average
 //        Calculate CGPA Java Program
 public class conditional_loops_7 {
@@ -27,6 +26,12 @@ public class conditional_loops_7 {
         System.out.print("Time duration in years :");
         double years = in.nextDouble();
         Depreciation(value,rod,years);
+        System.out.println("To find the batting average, Enter the following,");
+        System.out.print("Total runs scored :");
+        double total = in.nextDouble();
+        System.out.print("number of times out :");
+        double outs = in.nextDouble();
+        BattingAverage(total,outs);
     }
     //6
     static void CommissionPercentage(double amount,double commission){
@@ -39,6 +44,10 @@ public class conditional_loops_7 {
     //8
     static void Depreciation(double value, double rateOfDepreciation, double years){
         System.out.println("The answer is "+value * Math.pow((1 - rateOfDepreciation / 100), years));//Formula of Depreciation
+    }
+    //9
+    static void BattingAverage(double total,double outs){
+        System.out.println("The answer is "+(total/outs));
     }
 
 
