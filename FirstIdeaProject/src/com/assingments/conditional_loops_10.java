@@ -1,8 +1,7 @@
 package com.assingments;
 
 import java.util.Scanner;
-//Kunal is allowed to go out with his friends only on the even days of a given month. Write a program to count the number of days he can go out in the month of August.
-//Write a program to print the sum of negative numbers, sum of positive even numbers and the sum of positive odd numbers from a list of numbers (N) entered by the user. The list terminates when the user enters a zero.
+
 public class conditional_loops_10 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -30,6 +29,8 @@ public class conditional_loops_10 {
         System.out.println("Enter a number to find sum of its digits :");
         int digit = in.nextInt();
         DigitSum(digit);
+        // Number of days on August = 31
+        Kunal(31);
     }
 
     static boolean PerfectNumber(int n){
@@ -57,6 +58,19 @@ public class conditional_loops_10 {
             sum+=reminder;
             n = n/2;
         }
-        System.out.print(sum);
+        System.out.println(sum);
+    }
+    // Kunal is allowed to go out with his friends only on
+    // the even days of a given month. Write a program to count
+    // the number of days he can go out in the month of August.
+    // Number of days on August = 31
+    static void Kunal(int n){
+        int No_of_outings = 0;
+        for(int i=1;i<=n;i++){
+            if(i%2 == 0){
+                No_of_outings++;
+            }
+        }
+        System.out.println("Number of outings is"+No_of_outings);
     }
 }
