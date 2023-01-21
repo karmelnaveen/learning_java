@@ -1,7 +1,6 @@
 package com.assingments;
 
 import java.util.Scanner;
-//        Calculate Batting Average
 //        Calculate CGPA Java Program
 public class conditional_loops_7 {
     public static void main(String[] args) {
@@ -32,6 +31,19 @@ public class conditional_loops_7 {
         System.out.print("number of times out :");
         double outs = in.nextDouble();
         BattingAverage(total,outs);
+        //Let's assume we only have 5 subjects
+        System.out.println("To find the CGPA, Enter the marks of each subject,");
+        System.out.print("English");
+        double english = in.nextDouble();
+        System.out.print("Tamil");
+        double tamil = in.nextDouble();
+        System.out.print("Maths");
+        double maths = in.nextDouble();
+        System.out.print("Physics");
+        double physics = in.nextDouble();
+        System.out.print("Computer Science");
+        double cs = in.nextDouble();
+        CGPA(english,tamil,maths,physics,cs);
     }
     //6
     static void CommissionPercentage(double amount,double commission){
@@ -49,6 +61,10 @@ public class conditional_loops_7 {
     static void BattingAverage(double total,double outs){
         System.out.println("The answer is "+(total/outs));
     }
-
+    //10
+    static void CGPA(double english,double tamil,double maths,double physics,double cs){
+        double cgpa = (english+tamil+maths+physics+cs)/5;
+        System.out.println("The answer is "+ cgpa+" & cgpa percentage is "+(9.5*cgpa));
+    }
 
 }
