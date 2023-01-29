@@ -1,0 +1,20 @@
+package Arrays;
+
+public class max_arr {
+    public static void main(String[] args) {
+        int[] arr = {12,124,41568,6578,1214,999,321};
+        System.out.println("The maximum value in the array is :"+Max(arr));
+    }
+    static int Max(int[] arr){
+        if(arr.length == 0){
+            return -1; //edge cases
+        }
+        int max_value = 0;
+        for(int i = 0;i<arr.length ;i++){
+            if(arr[i]>max_value){
+                max_value = arr[i];
+            }
+        }
+        return max_value;
+    }
+}
