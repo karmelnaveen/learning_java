@@ -9,10 +9,21 @@ public class swap_arr {
         System.out.println("Un-swapped array :"+ Arrays.toString(arr));
         swap(arr , 4, 7);
         System.out.println("Swapped array :"+ Arrays.toString(arr));
+        reverse(arr);
+        System.out.println("Reversed array :"+ Arrays.toString(arr));
     }
     static void swap(int[] arr,int index_1,int index_2){
         int temp = arr[index_1];
         arr[index_1] = arr[index_2];
         arr[index_2] = temp;
+    }
+    static void reverse(int[] arr){
+        int start = 0;
+        int end = arr.length - 1;
+        while(start < end){
+            swap(arr,start,end);
+            start++;
+            end--;
+        }
     }
 }
