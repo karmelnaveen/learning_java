@@ -2,7 +2,7 @@ package Methods;
 
 import java.util.Scanner;
 
-public class method_7 {
+public class methods_7 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a number to find whether it is palindrome :");
