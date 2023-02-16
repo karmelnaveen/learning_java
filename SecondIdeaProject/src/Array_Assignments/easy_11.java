@@ -9,28 +9,32 @@ import java.util.List;
 public class easy_11 {
     public static void main(String[] args) {
         List<List<String>> items = Arrays.asList(Arrays.asList("phone","blue","pixel"),
-                Arrays.asList("computer","silver","phone"),
+                Arrays.asList("computer","silver","lenovo"),
                 Arrays.asList("phone","gold","iphone"));
         //System.out.println(items);
-        String ruleKey = "type";
-        String ruleValue = "phone";
+        String ruleKey = "color";
+        String ruleValue = "silver";
+        int ans = countMatches(items,ruleKey,ruleValue);
+        System.out.println(ans);
+    }
+    public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int count = 0;
         for (List<String> item : items) {
-            if (ruleKey == "type") {
-                if (item.get(0) == ruleValue) {
+            if (ruleKey.equals("type")) {
+                if (ruleValue.equals(item.get(0))) {
                     count += 1;
                 }
-            } else if (ruleKey == "color") {
-                if (item.get(1) == ruleValue) {
+            } else if (ruleKey.equals("color")) {
+                if (ruleValue.equals(item.get(1))) {
                     count += 1;
                 }
-            } else if (ruleKey == "name") {
-                if (item.get(2) == ruleValue) {
+            } else if (ruleKey.equals("name")) {
+                if (ruleValue.equals(item.get(2))) {
                     count += 1;
                 }
             }
 
         }
-        System.out.println(count);
+        return count;
     }
 }
