@@ -14,16 +14,20 @@ public class easy_14 {
         int n = 3;
         int[][] matrix = new int[m][n];
         int[][] indices = {{0,1},{1,1}};
+        //Looping through each values in indices (Here 2)
         for(int i = 0;i<indices.length;i++){
             var row = indices[i][0];
             var column = indices[i][1];
+            //Looping through all columns --> Same row but all columns
             for(int r = 0; r<n;r++){
                 matrix[row][r]++;
             }
+            //Looping through all rows --> Same column but all the rows
             for(int c = 0; c<m;c++){
                 matrix[c][column]++;
             }
         }
+        //Looping through all rows and columns;
         int counter = 0;
         for(int a = 0;a<m;a++){
             for(int b =0;b<n;b++){
