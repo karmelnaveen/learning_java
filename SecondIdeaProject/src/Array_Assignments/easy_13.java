@@ -35,9 +35,9 @@ public class easy_13 {
         int[][] inverted = new int[image.length][image.length];
         for(int i = 0;i<=n;i++){
             for(int j = 0;j<=n;j++){
-                if(reversed[i][n-j] == 0){
+                if(reversed[i][j] == 0){
                     inverted[i][j] = 1;
-                } else if (reversed[i][n-j] == 1) {
+                } else if (reversed[i][j] == 1) {
                     inverted[i][j] = 0;
                 }
             }
